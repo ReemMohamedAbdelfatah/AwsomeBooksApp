@@ -1,11 +1,10 @@
 const addItemHtml = (book, index) => {
   const child = `
-  <section class="book">
-    <div id="col1">
-      <p>Title: ${book.title}</p>
-      <p>Author: ${book.author}</p>
+  <section class="book" style="display:flex; flex-direction:column">
+    <div id="col1" style="display:flex; justify-content: space-between;">
+      <p>"${book.title}" by ${book.author}</p>
+      <button id="removeBtn${index}" onclick="remove(${index})" class="deleteBtn" > Remove</button>
     </div>
-    <button id="removeBtn${index}" onclick="remove(${index})" > Remove</button>
   </section>`;
   const parent = document.getElementById('listBooks');
   parent.innerHTML += child;
@@ -60,6 +59,8 @@ addBtn.addEventListener('click', () => {
   const storage = new BookStorage
   storage.addBook(newBook)
   listBooks()
+  document.getElementById('addTitleInput').value = '';
+  document.getElementById('addAuthorInput').value = '';
 });
 
 // remove books
