@@ -1,3 +1,45 @@
 * {
   font-family: 'Courier New', Courier, monospace;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#listBooks {
+  width: 70%;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book:nth-child(odd) {
+  background: #ccc;
+}
+
+.deleteBtn {
+  margin: 5px;
+  box-shadow: 2px 2px 0 0  black;
+}
+
+#col1 {
+  display: flex;
+  gap: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#addBtn {
+  width: 30%;
+  margin-left: 70%;
+  box-shadow: 2px 2px 0 0 black;
+}
