@@ -1,3 +1,6 @@
+/* eslint-disable max-classes-per-file */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 const addItemHtml = (book, index) => {
   const child = `
   <section class="book" style="display:flex; flex-direction:column">
