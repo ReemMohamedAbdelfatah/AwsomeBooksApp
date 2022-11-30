@@ -17,9 +17,9 @@ const clearListDiv = () => {
 };
 
 class Book {
-  constructor(title,author){
-    this.title = title
-    this.author = author
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
   }
 }
 
@@ -33,13 +33,12 @@ class BookStorage {
   }
 
   removeBook = (index) => {
-      const books = JSON.parse(localStorage.getItem('allEntries'));
-      books.splice(index, 1);
-      localStorage.setItem('allEntries', JSON.stringify(books));
-      listBooks();
+    const books = JSON.parse(localStorage.getItem('allEntries'));
+    books.splice(index, 1);
+    localStorage.setItem('allEntries', JSON.stringify(books));
+    listBooks();
   }
 }
-
 
 listBooks = () => {
   clearListDiv();
@@ -56,16 +55,16 @@ addBtn.addEventListener('click', () => {
   const newTitle = document.getElementById('addTitleInput').value;
   const newAuthor = document.getElementById('addAuthorInput').value;
   const newBook = new Book(newTitle, newAuthor);
-  const storage = new BookStorage
-  storage.addBook(newBook)
-  listBooks()
+  const storage = new BookStorage();
+  storage.addBook(newBook);
+  listBooks();
   document.getElementById('addTitleInput').value = '';
   document.getElementById('addAuthorInput').value = '';
 });
 
 // remove books
 const remove = (index) => {
-  const storage = new BookStorage;
+  const storage = new BookStorage();
   storage.removeBook(index);
   listBooks();
 };
