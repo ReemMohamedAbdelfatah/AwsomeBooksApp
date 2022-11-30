@@ -148,11 +148,11 @@ To run the project, execute the following command:
 
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/reem-abd-el-fatah-a07543116)
 
-👤 **Author2**
+👤 **Yuvenal Njoroge**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/yuvenalmash)
+- Twitter: [@twitterhandle](https://twitter.com/_Juvenal_)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/yuvenal-njoroge)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
