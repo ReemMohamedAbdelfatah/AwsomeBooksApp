@@ -86,11 +86,8 @@ No prerequisites required
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Add navigation bar**
-- **Add Three content sections:**
-    - Books list
-    - Add book form
-    - Contact info
+- **Convert UI to high fidelity**
+- **Add animations**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
