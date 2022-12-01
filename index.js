@@ -62,7 +62,15 @@ const removeBook = (id) => {
 
   let books = Booklst;
   console.log(books);
-    books = books.filter(book => book.id === parseInt(id));
+    books = books.filter(book => book.id == id);
+    /*books.forEach((book,index) => {
+      if(book.id == id)
+      {
+        books.splice(index, 1);
+        return books;
+      }
+    })*/
+   
     console.log(books);
  
   localStorage.setItem("Booklist", JSON.stringify(books));
