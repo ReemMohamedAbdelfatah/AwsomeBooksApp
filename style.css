@@ -8,8 +8,45 @@ body {
   align-items: center;
 }
 
-#listBooks {
+nav {
+  display: flex;
   width: 70%;
+  justify-content: space-between;
+  padding: 0px 3%;
+  border: 2px solid black;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  padding: 0%;
+  list-style: none;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav hr {
+  height: 90%;
+}
+
+sections {
+  width: 70%;
+}
+
+h2 {
+  text-align: center;
+}
+
+#listBooks {
+  display: flex;
+  flex-direction: column;
+}
+
+#books{
   border: 2px solid rgb(0, 0, 0);
 }
 
@@ -27,14 +64,16 @@ body {
   box-shadow: 2px 2px 0 0  black;
 }
 
-#col1 {
+#addBook {
   display: flex;
-  gap: 5px;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .form {
   display: flex;
   flex-direction: column;
+  width: 50%;
   gap: 10px;
 }
 
@@ -43,3 +82,9 @@ body {
   margin-left: 70%;
   box-shadow: 2px 2px 0 0 black;
 }
+
+#contactInfo {
+  display: flex;
+  flex-direction: column;
+}
+

@@ -1,24 +1,43 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+
 const addItemHtml = (book, index) => {
   const child = `
-  <section class="book" style="display:flex; flex-direction:column">
-    <div id="col1" style="display:flex; justify-content: space-between;">
-      <p>"${book.title}" by ${book.author}</p>
-      <button id="removeBtn${index}" onclick="remove(${index})" class="deleteBtn" > Remove</button>
-    </div>
+  <section class="book">
+    <p>"${book.title}" by ${book.author}</p>
+    <button id="removeBtn${index}" onclick="remove(${index})" class="deleteBtn" > Remove</button>
   </section>`;
-  const parent = document.getElementById('listBooks');
+  const parent = document.getElementById('books');
   parent.innerHTML += child;
 };
 
 const clearListDiv = () => {
   const child = '';
-  const parent = document.getElementById('listBooks');
+  const parent = document.getElementById('books');
   parent.innerHTML = child;
 };
 
+// Navigation
+const showList = () => {
+  document.getElementById('listBooks').style.display = 'block'
+  document.getElementById('addBook').style.display = 'none'
+  document.getElementById('contactInfo').style.display = 'none'
+}
+
+const showAddBook = () => {
+  document.getElementById('listBooks').style.display = 'none'
+  document.getElementById('addBook').style.display = 'block'
+  document.getElementById('contactInfo').style.display = 'none'
+}
+
+const showContact = () => {
+  document.getElementById('listBooks').style.display = 'none'
+  document.getElementById('addBook').style.display = 'none'
+  document.getElementById('contactInfo').style.display = 'block'
+}
+
+// Classes
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -43,6 +62,7 @@ class BookStorage {
   }
 }
 
+// list books
 listBooks = () => {
   clearListDiv();
   let books = JSON.parse(localStorage.getItem('allEntries'));
@@ -72,4 +92,6 @@ const remove = (index) => {
   listBooks();
 };
 
+
+showList();
 listBooks();
