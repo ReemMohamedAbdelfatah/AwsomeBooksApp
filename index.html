@@ -1,27 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<<<<<<< HEAD
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Awsome App</title>
-</head>
-<body>
-  <div class="container">
-    <ul id="book-list">
-      
-    </ul>
-  </div>
-  <form>
-  <input type="text" id="author"  placeholder="author" ><br><br>
-  <input type="text" id="title"  placeholder="title" ><br><br>
-  <input type="submit" value="Submit" id="submitBtn">
-  </form>
-  <script type="text/javascript" src="index.js"></script>
-</body>
-=======
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,14 +9,14 @@
   <nav>
     <p>Awesome Books</p>
     <ul>
-      <a href="#" onclick="showList()">List</a>
+      <a href="#"  id="showListBtn">List</a>
       <hr>
-      <a href="#" onclick="showAddBook()">Add New</a>
+      <a href="#"  id="addNewBtn">Add New</a>
       <hr>
-      <a href="#" onclick="showContact()">Contact</a>
+      <a href="#" id="contactBtn">Contact</a>
     </ul>
   </nav>
-
+  <p class="dateDisplay"></p>
   <sections>
     <section id="listBooks">
       <h2>All awesome books</h1>
@@ -68,12 +44,9 @@
       </div>
     </section>
   </sections>
-
   <footer>
-    <p>Copyright</p>
+    <p>Copyright &copy; All right reserved 2022</p>
   </footer>
-  <script src="js/index.js"></script>
+  <script src="js/index.js" type="module"></script>
 </body>
-
->>>>>>> 53ac4c80b30486bcd1f83f88698bd080f1b7fd50
 </html>

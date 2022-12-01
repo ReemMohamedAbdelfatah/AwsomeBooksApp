@@ -1,6 +1,9 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+import setTime from './date.js';
+
+setTime();
 
 const addItemHtml = (book, index) => {
   const child = `
@@ -20,22 +23,22 @@ const clearListDiv = () => {
 
 // Navigation
 const showList = () => {
-  document.getElementById('listBooks').style.display = 'block'
-  document.getElementById('addBook').style.display = 'none'
-  document.getElementById('contactInfo').style.display = 'none'
-}
+  document.getElementById('listBooks').style.display = 'block';
+  document.getElementById('addBook').style.display = 'none';
+  document.getElementById('contactInfo').style.display = 'none';
+};
 
 const showAddBook = () => {
-  document.getElementById('listBooks').style.display = 'none'
-  document.getElementById('addBook').style.display = 'block'
-  document.getElementById('contactInfo').style.display = 'none'
-}
+  document.getElementById('listBooks').style.display = 'none';
+  document.getElementById('addBook').style.display = 'block';
+  document.getElementById('contactInfo').style.display = 'none';
+};
 
 const showContact = () => {
-  document.getElementById('listBooks').style.display = 'none'
-  document.getElementById('addBook').style.display = 'none'
-  document.getElementById('contactInfo').style.display = 'block'
-}
+  document.getElementById('listBooks').style.display = 'none';
+  document.getElementById('addBook').style.display = 'none';
+  document.getElementById('contactInfo').style.display = 'block';
+};
 
 // Classes
 class Book {
@@ -63,7 +66,7 @@ class BookStorage {
 }
 
 // list books
-listBooks = () => {
+const listBooks = () => {
   clearListDiv();
   let books = JSON.parse(localStorage.getItem('allEntries'));
   if (books == null) books = [];
@@ -92,6 +95,8 @@ const remove = (index) => {
   listBooks();
 };
 
-
+document.querySelector('#showListBtn').addEventListener('click', showList);
+document.querySelector('#addNewBtn').addEventListener('click', showAddBook);
+document.querySelector('#contactBtn').addEventListener('click', showContact);
 showList();
 listBooks();
